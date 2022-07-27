@@ -25,11 +25,8 @@ As this pipeline was originally developed in the proprietary environment [Syntro
 
 Begin by cloning this repository which will download all required scripts needed to set up your local back-end database and run the application locally.
 
-*NOTE: This repository has not yet been approved for public release. In the interim, unzip the provided code zip file and skip the cloning step.*
-
 ```shell
-# Note: This link will be updated pending public release of this repository. 
-git clone git@github.com/RWE-therapeutics/mabs-rwe.git
+git clone git@github.com:mitre/covid19-mabs-rwe.git
 ```
 
 Next, ensure the following Python packages are installed either using `pip` or `conda`.
