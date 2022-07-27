@@ -1,0 +1,30 @@
+variable,ps,drs,dtype,transformer,bool_0,bool_1,onehot_baseline,object_range,map_null
+zip3_pop_density,TRUE,null,float,numeric,null,null,null,null,null
+zip3_adi,TRUE,null,float,numeric,null,null,null,null,null
+treatment_group,TRUE,null,bool,passthrough,null,null,null,null,null
+total_visits,TRUE,null,int,numeric_intra_hs,null,null,null,null,null
+smoke_status,TRUE,null,object,onehot,null,null,non_smoker,"former_smoker, non_smoker, smoker",unknown
+race,TRUE,null,object,onehot,null,null,other race,"American Indian or Alaska Native, Asian, Black or African American, Native Hawaiian or Other Pacific Islander, Other race, White",unknown
+pregnant,TRUE,null,bool,passthrough,null,null,null,null,null
+person_id,TRUE,null,object,passthrough,null,null,null,null,null
+pandemic_phase,TRUE,null,object,onehot,null,null,null,null,null
+out_of_state,TRUE,null,bool,passthrough,null,null,null,null,null
+obese,TRUE,null,bool,passthrough,null,null,null,null,null
+most_recent_sarscov2_immunization_cat,TRUE,null,object,onehot,null,null,null,null,unknown
+marital_status,TRUE,null,object,onehot,null,null,unmarried,"Common law, Divorced, Domestic partner, Legally Separated, Married, Never married, Other, Unmarried, Widowed",unknown
+insurance_category,TRUE,null,object,onehot,null,null,other,null,unknown
+imputed_vitals,TRUE,null,bool,passthrough,null,null,null,null,null
+imputed_demographics,TRUE,null,bool,passthrough,null,null,null,null,null
+impute_id,TRUE,null,int,passthrough,null,null,null,null,null
+immunosuppressant_prev90days,TRUE,null,bool,numeric,null,null,null,null,null
+immunized_sarscov2_status,TRUE,null,object,onehot,null,null,no,null,null
+health_system,TRUE,null,object,onehot,null,null,null,"A, B, C, D",null
+ethnicity,TRUE,null,bool,passthrough,Not Hispanic or Latino,Hispanic or Latino,null,null,null
+diagnosis_epoch,TRUE,null,object,onehot,null,null,null,null,null
+covid19_[\w\d]+_vs,FALSE,null,bool,passthrough,null,null,null,null,null
+condition_[\w\d]+_vs,TRUE,null,bool,passthrough,null,null,null,null,null
+birthsex,TRUE,null,bool,passthrough,Male,Female,null,null,unknown
+age_group,TRUE,null,object,onehot,null,null,80,null,unknown
+dummy_variable,FALSE,null,null,null,null,null,null,null,null
+age,FALSE,null,int,numeric,null,null,null,null,null
+bmi,FALSE,null,float,numeric,null,null,null,null,null

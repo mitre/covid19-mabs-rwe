@@ -1,0 +1,10 @@
+age_group,80+,[10-20),[20-30),[30-40),[40-50),[50-60),[60-70),[70-80)
+diagnosis_epoch,202011,202012,202101,202102,202103,202104,202105,202106,202107,202108,202109,202110,202111,202112,202201
+health_system,A,B,C,D
+immunized_sarscov2_status,full,full_boosted,no,partial
+insurance_category,medicaid,medicare,military_va_insurance,other,private_insurance,self_pay
+marital_status,Divorced,Married,Unmarried,Widowed
+most_recent_sarscov2_immunization_cat,2weeks_3months,3month_6month,6month+,under_2weeks,unvaccinated
+pandemic_phase,delta,omicron,pre_delta
+race,American Indian or Alaska Native,Asian,Black or African American,Native Hawaiian or Other Pacific Islander,Other race,White
+smoke_status,former_smoker,non_smoker,smoker

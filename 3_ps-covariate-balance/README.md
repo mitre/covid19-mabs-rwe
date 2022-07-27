@@ -1,0 +1,13 @@
+# 3. Covariate Balance Assessment
+
+The scripts here are used to evaluate candidate propensity models and then propagate the scores from the model that best achieves best covariate balance between the treated and untreated populations.
+
+- Covariate balance is a common method of evaluating propensity models that are used to control confounding by matching or weighting, and a well-balanced propensity model reduces bias in treatment effectiveness estimates [(Stuart et al. 2013)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3713509/?report=classic)
+- Frequently used metrics for assessing covariate balance are the standardized mean differences for each covariate between treated and untreated groups, supplemented by the non-parametric Kolmogorov-Smirnov (KS) test statistic [(Austin and Stuart 2015)](https://onlinelibrary.wiley.com/doi/full/10.1002/sim.6607)
+- [Belitser et al. (2011)](https://pubmed.ncbi.nlm.nih.gov/21805529/) recommend a threshold of 0.1 for assessing sufficient balance of marginal absolute standardized mean differences
+- Computation of standardized mean differences and KS test statistics was performed using the R package cobalt (Greifer 2021)
+    - Mean and max statistics were aggregated across covariates to evaluate the comparative balance of each model
+    - Loveplots were produced to visualize differences between treated and untreated populations before and after inverse propensity weighting. 
+
+## Code requirements and process
+`main_covariate_balance.R` expects inputs matching the schemas of `2_ps/data/merge_models.csv` and `2_ps/data/get_dataframe.csv`, respectively. The script reads in these inputs of covariates used to fit the propensity model and scores from all candidate propensity models, joins them, and computes the covariate balance of the weighted and unweighted distributions. Results are aggregated and summarized across covariates for each model and written to `3_ps-covariate-balance/data/aggregate_covariate_balance_model_comparison.csv`. The model that best minimizes all difference metrics is selected for downstream use in the marginal structural model, and the dataframe with the corresponding propensity score for each person_id, impute_id combination is written to `3_ps-covariate-balance/data/best_model_pscores.csv`. Also output from `main_covariate_balance.R` are loveplots for visualizing standardized mean differences and KS test statistics of the best model, for individual covariates. The main script saves these plots to `3_ps-covariate-balance/figures/`.
